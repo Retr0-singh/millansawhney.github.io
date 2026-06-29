@@ -1,0 +1,286 @@
+/* Reset & base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  color: #222;
+  line-height: 1.6;
+  font-size: 16px;
+}
+a {
+  color: #1a3e72;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+ul {
+  padding-left: 1.25rem;
+}
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Header and Navigation */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1a3e72;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #1a3e72;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #2c5282;
+}
+
+/* Hamburger nav toggle */
+.nav-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #1a3e72;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 6rem 0 4rem;
+  text-align: center;
+  background: #f0f7ff;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 8px rgb(80 105 160 / 0.1);
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #0a2647;
+}
+
+.hero-intro {
+  font-size: 1.05rem;
+  color: #3b5e8e;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #1a3e72;
+  color: white;
+  border-color: #1a3e72;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #16355a;
+  border-color: #16355a;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1a3e72;
+  border-color: #1a3e72;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #1a3e72;
+  color: white;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #0a2647;
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid #1a3e72;
+  padding-bottom: 0.3rem;
+  max-width: max-content;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 1px 6px rgba(50, 50, 93, 0.1);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-card {
+  flex: 1 1 100%;
+  max-width: 480px;
+}
+
+.card h4 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #1a3e72;
+  margin-bottom: 0.75rem;
+}
+
+.card ul {
+  list-style: disc inside;
+  color: #444;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.skills-list {
+  list-style: disc inside;
+  max-width: 560px;
+  color: #555;
+}
+
+/* Placeholder text */
+.placeholder-info {
+  font-style: italic;
+  color: #7a8a9e;
+  margin-top: 1rem;
+}
+
+/* Contact List */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  color: #444;
+  max-width: 480px;
+}
+
+.contact-list li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.contact-list a {
+  color: #1a3e72;
+  font-weight: 600;
+}
+
+.contact-list a:hover,
+.contact-list a:focus {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #8298b1;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 58px;
+    right: -100%;
+    background: #f0f7ff;
+    height: calc(100% - 58px);
+    width: 260px;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 1rem;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 9999;
+  }
+
+  .nav-list.open {
+    right: 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list li {
+    margin: 0 1.5rem;
+  }
+
+  .nav-list a {
+    font-size: 1.1rem;
+  }
+}
